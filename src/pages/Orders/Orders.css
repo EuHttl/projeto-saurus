@@ -1,0 +1,332 @@
+.orders-container {
+  min-height: 100vh;
+  width: 100vw;
+  background: linear-gradient(135deg, #fff 60%, #e63946 100%);
+  padding: 0;
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.orders-header {
+  width: 100%;
+  background: #e63946;
+  color: #fff;
+  padding: 32px 0 24px 0;
+  margin-bottom: 32px;
+  box-shadow: 0 2px 12px rgba(230,57,70,0.08);
+  box-sizing: border-box;
+}
+
+.orders-header h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 0;
+  text-align: center;
+}
+
+.filters-container {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 28px;
+  justify-content: center;
+  background: #fff;
+  padding: 18px 32px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(230,57,70,0.07);
+  box-sizing: border-box;
+  width: 90%;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.filter-input {
+  color: #111;
+  padding: 12px 14px;
+  border: 1.5px solid #e63946;
+  border-radius: 8px;
+  width: 220px;
+  font-size: 1rem;
+  outline: none;
+  background: #f9f9f9;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+.filter-input:focus {
+  border-color: #d62828;
+  background: #fff;
+}
+
+.orders-list {
+  width: 90%;
+  max-width: 900px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 4px 24px rgba(230,57,70,0.10);
+  margin-bottom: 32px;
+  overflow-x: auto;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.orders-list table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 14px;
+  overflow: hidden;
+  min-width: 600px;
+}
+
+.orders-list th, .orders-list td {
+  padding: 16px 18px;
+  text-align: left;
+  border-bottom: 1px solid #f4f4f9;
+  font-size: 1.05rem;
+  box-sizing: border-box;
+}
+
+.orders-list th {
+  background-color: #e63946;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid #fff;
+  white-space: nowrap;
+}
+.orders-list td {
+  color: #111;
+}
+
+.orders-list tbody tr {
+  transition: background 0.18s;
+}
+.orders-list tbody tr:hover {
+  background-color: #ffeaea;
+  cursor: pointer;
+}
+
+.orders-list tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.pagination-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.pagination-container button {
+  background: #e63946;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 22px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(230, 57, 70, 0.10);
+  min-width: 80px;
+}
+.pagination-container button:disabled {
+  background: #fca5ad;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+.pagination-container span {
+  font-size: 1.1rem;
+  color: #e63946;
+  font-weight: 500;
+}
+
+.spinner {
+  border: 4px solid rgba(230, 57, 70, 0.15);
+  border-radius: 50%;
+  border-top-color: #e63946;
+  width: 36px;
+  height: 36px;
+  animation: spin 1s ease-in-out infinite;
+  margin: 40px auto;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.error-message, .orders-list p[style*='color: red'] {
+  color: #e63946;
+  background: #ffeaea;
+  border: 1px solid #e63946;
+  border-radius: 6px;
+  padding: 10px;
+  margin: 20px 0;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* Responsividade para tablets */
+@media (max-width: 900px) {
+  .orders-container {
+    padding: 0;
+  }
+  .orders-header {
+    padding: 20px 0 16px 0;
+  }
+  .orders-header h1 {
+    font-size: 1.8rem;
+  }
+  .filters-container {
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px 20px;
+    border-radius: 10px;
+    width: 95%;
+    margin: 0 auto 20px auto;
+  }
+  .filter-input {
+    width: 100%;
+    font-size: 0.95rem;
+    padding: 10px 12px;
+  }
+  .orders-list {
+    width: 95%;
+    margin: 0 auto 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(230,57,70,0.12);
+  }
+  .orders-list table {
+    min-width: 500px;
+  }
+  .orders-list th, .orders-list td {
+    padding: 12px 8px;
+    font-size: 0.95rem;
+  }
+  .pagination-container {
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  .pagination-container button {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+  .pagination-container span {
+    font-size: 1rem;
+  }
+}
+
+/* Responsividade para dispositivos móveis médios */
+@media (max-width: 600px) {
+  .orders-header h1 {
+    font-size: 1.4rem;
+  }
+  .filters-container {
+    width: 98%;
+    margin: 0 auto 16px auto;
+    border-radius: 8px;
+    padding: 12px 16px;
+  }
+  .filter-input {
+    font-size: 0.9rem;
+    padding: 8px 10px;
+  }
+  .orders-list {
+    width: 98%;
+    margin: 0 auto 16px auto;
+    border-radius: 8px;
+  }
+  .orders-list table {
+    min-width: 400px;
+  }
+  .orders-list th, .orders-list td {
+    padding: 8px 4px;
+    font-size: 0.85rem;
+  }
+  .pagination-container {
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+  .pagination-container button {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    min-width: 60px;
+  }
+  .pagination-container span {
+    font-size: 0.9rem;
+  }
+}
+
+/* Responsividade para dispositivos móveis pequenos */
+@media (max-width: 480px) {
+  .orders-header h1 {
+    font-size: 1.2rem;
+  }
+  .filters-container {
+    width: 100%;
+    margin: 0 0 12px 0;
+    border-radius: 0;
+    padding: 8px 12px;
+  }
+  .filter-input {
+    font-size: 0.85rem;
+    padding: 6px 8px;
+  }
+  .orders-list {
+    width: 100%;
+    margin: 0 0 12px 0;
+    border-radius: 0;
+  }
+  .orders-list table {
+    min-width: 350px;
+  }
+  .orders-list th, .orders-list td {
+    padding: 6px 2px;
+    font-size: 0.8rem;
+  }
+  .pagination-container button {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    min-width: 50px;
+  }
+  .pagination-container span {
+    font-size: 0.85rem;
+  }
+}
+
+/* Responsividade para dispositivos muito pequenos */
+@media (max-width: 360px) {
+  .orders-header h1 {
+    font-size: 1.1rem;
+  }
+  .filters-container {
+    padding: 6px 8px;
+  }
+  .filter-input {
+    font-size: 0.8rem;
+    padding: 4px 6px;
+  }
+  .orders-list table {
+    min-width: 300px;
+  }
+  .orders-list th, .orders-list td {
+    padding: 4px 1px;
+    font-size: 0.75rem;
+  }
+  .pagination-container button {
+    padding: 4px 8px;
+    font-size: 0.75rem;
+    min-width: 40px;
+  }
+  .pagination-container span {
+    font-size: 0.8rem;
+  }
+}
