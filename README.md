@@ -70,7 +70,7 @@ Este projeto é uma aplicação web desenvolvida como parte de um desafio técni
 ## 📚 Documentação da API
 - [Swagger Saurus](https://api-pedido-erp-gateway-prod.saurus.net.br/swagger/index.html)
 
-## Portfólio e LinkedIn
+## 📱 Portfólio e LinkedIn
 - [LinkedIn](https://www.linkedin.com/in/hyttalo-costa-1991841b2/)
 - [GitHub](https://github.com/EuHttl?tab=repositories)
 
